@@ -15,5 +15,5 @@ jobs:
         with:
           path: "BurgerReact"
       - name: RunOne
-        run: |
+        run:
 	  echo Hello, world!
