@@ -1,0 +1,19 @@
+name: CI-Main-pipeline
+on:
+  # Triggers the workflow on push or pull request events but only for the develop branch
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ] # to change to develop
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container:
+      image: lucasalt/act_base:latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          path: "BurgerReact"
+      - name: RunOne
+        run: |
+	  echo Hello, world!
